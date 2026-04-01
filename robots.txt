@@ -9,4 +9,4 @@ Disallow: /
 User-agent: CCBot
 Disallow: /
 
-Sitemap: https://vanessaswhimsicalworld.co.uk/sitemap.xml
+Sitemap: https://yorkshirerecyclingltd.co.uk/sitemap.xml
