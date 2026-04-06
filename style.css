@@ -39,23 +39,23 @@
 :root {
 	interpolate-size: allow-keywords;
 
-	--background: linear-gradient(45deg, #0c0a09 0%, #1c1917 45%, #0c0a09 100%);
-	--header: linear-gradient(90deg, #1c1917e0, #2dd4bf, #0c0a09);
-	--btn-accent: linear-gradient(135deg, #fb923c, #ea580c);
-	--btn-inherit: #fff7ed;
-	--accent: linear-gradient(135deg, #f97316, #c2410c);
-	--sub-title: linear-gradient(-135deg, #2dd4bf30, #042f2e);
-	--gift: #f0fdfae1;
-	--gift-bg: rgba(251, 146, 60, 0.1);
-	--gift-btn: linear-gradient(135deg, #9a3412, #431407);
-	--border-radius: 10px;
-	--container: #0c0a09;
-	--table: linear-gradient(180deg, #1c1917, #0c0a09);
-	--minus: #38bdf8;
-	--shadow: #fb923c50;
-	--second-shadow: #ea580c;
-	--text-shadow: #2dd4bf;
-	--list-bg: linear-gradient(90deg, rgba(45, 212, 191, 0.1), rgba(251, 146, 60, 0.1));
+	--background: linear-gradient(45deg, #0f172a 0%, #1e293b 45%, #0f172a 100%);
+	--header: linear-gradient(90deg, #1e293be0, #94a3b8, #0f172a);
+	--btn-accent: linear-gradient(135deg, #475569, #1e293b);
+	--btn-inherit: #f8fafc;
+	--accent: linear-gradient(135deg, #94a3b8, #475569);
+	--sub-title: linear-gradient(-135deg, #94a3b820, #0f172a);
+	--gift: #f1f5f9;
+	--gift-bg: rgba(148, 163, 184, 0.05);
+	--gift-btn: linear-gradient(135deg, #334155, #0f172a);
+	--border-radius: 15px;
+	--container: #0f172a;
+	--table: linear-gradient(180deg, #1e293b, #0f172a);
+	--minus: #64748b;
+	--shadow: #94a3b820;
+	--second-shadow: #475569;
+	--text-shadow: #cbd5e1;
+	--list-bg: linear-gradient(90deg, rgba(148, 163, 184, 0.08), rgba(15, 23, 42, 0.1));
 }
 
 * {
@@ -193,6 +193,9 @@ header {
 	justify-content: space-between;
 	background: var(--header);
 	box-shadow: 0 3px 3px var(--shadow);
+	border-bottom-left-radius: var(--border-radius);
+	border-bottom-right-radius: var(--border-radius);
+	corner-shape: scoop;
 	max-width: 100vw;
 	margin: 0 auto;
 	position: sticky;
@@ -211,12 +214,15 @@ header img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 10px;
 }
 
 .h-violet-btn {
 	padding: 10px 20px;
 	font-size: 1rem;
 	border: 1px solid var(--btn-inherit);
+	border-radius: calc(var(--border-radius) / 2);
+	corner-shape: scoop;
 	margin-right: 5px;
 	font-weight: 700;
 	transition: all 0.3s ease-in-out;
@@ -226,7 +232,9 @@ header img {
 	padding: 12px 20px;
 	font-size: 1rem;
 	background: var(--btn-accent);
-	box-shadow: 3px 3px 3px var(--gift);
+	box-shadow: 0 0 3px var(--gift);
+	border-radius: calc(var(--border-radius) / 2);
+	corner-shape: scoop;
 	text-align: center;
 	font-weight: 700;
 	transition: all 0.3s ease;
@@ -245,7 +253,7 @@ header img {
 
 .h-violet-btn:hover,
 .h-accent-btn:hover {
-	transform: scale(0.9);
+	transform: translate3d(2px, 2px, 2px);
 	box-shadow: 1px 1px 5px var(--gift);
 }
 
@@ -287,6 +295,9 @@ header img {
 	height: auto;
 	padding: 10px 30px;
 	text-align: center;
+	border-radius: var(--border-radius);
+	corner-shape: scoop;
+	box-shadow: 0 0 15px var(--gift);
 	background: var(--gift-bg);
 	backdrop-filter: blur(5px);
 }
@@ -357,8 +368,10 @@ header img {
 .container {
 	padding-bottom: 10px;
 	margin: 30px auto;
+	border-radius: calc(var(--border-radius) / 2);
+	corner-shape: scoop;
 	background: var(--container);
-	box-shadow: 0 0 13px var(--second-shadow);
+	box-shadow: 0 0 7px var(--gift);
 }
 
 .container:nth-child(odd) {
@@ -396,7 +409,10 @@ header img {
 	position: relative;
 	padding-left: 30px;
 	margin-bottom: 10px;
+	border-bottom: 1px solid var(--gift);
 	background: var(--btn-accent);
+	border-radius: calc(var(--border-radius) / 2);
+	corner-shape: scoop;
 	overflow: hidden;
 }
 
